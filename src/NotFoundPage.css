@@ -1,0 +1,27 @@
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    padding: auto;
+    align-content: center;
+}
+
+.not-found-shout {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+}
+
+.not-found {
+    font-size: 50px;
+} 
+
+.not-found-link {
+    font-size: 12px;
+    color: rgb(82, 141, 252);
+}
+
+.not-found-link:active {
+    color: rgb(82, 141, 252);
+}

@@ -1,0 +1,18 @@
+.header-container {
+    display: flex;
+    align-content: center;
+    padding-bottom: 2vh;
+    width: 100vw;
+    height: 18vh;
+    justify-content: center;
+    background-color: #ffffff;
+} 
+
+.header-position{
+    margin: auto;
+}
+
+.image {
+    width: 18rem;
+    height: 9rem;
+}
