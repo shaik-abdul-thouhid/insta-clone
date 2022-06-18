@@ -19,6 +19,7 @@ const Post = (props: {
                 <div className='card-upper-content'>
                     <Link to={`/comments/${props.post.code}`} onClick={() => { props.setpostOb(props.post) }}>
                         <img className='card-image' src={props.post.display_src} alt={props.post.id} />
+
                     </Link>
                 </div>
 

@@ -8,6 +8,10 @@ import NotFoundPage from './NotFoundPage';
 import posts, { POSTS } from './resources/posts';
 import Comments from './resources/comments';
 
+export type POSTOB = {
+	url: string;
+	posts: POSTS
+}
 
 function App() {
 
