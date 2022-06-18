@@ -5,34 +5,32 @@ import Header from './Header';
 import CommentsPage from './Comments';
 import PostsPage from './Posts';
 import NotFoundPage from './NotFoundPage';
-import posts from './resources/posts';
+import posts, { POSTS } from './resources/posts';
 import Comments from './resources/comments';
 
-export type COMMENT_OB = {
-	url: string;
-	commentCode: string;
-	commentNumbers: number;
-	likesNumbers: number;
-};
 
 function App() {
 
-	const [commentOb, setCommentOb] = useState<COMMENT_OB>();
+	const [postOb, setPostOb] = useState<POSTS | undefined>(undefined);
 
 	useEffect(function () {
-		console.log(commentOb);
-	}, [commentOb])
+		if (window.location.pathname === '/') setPostOb(undefined);
+		console.log(postOb);
+	}, [postOb]);
 
 	return (
 		<React.Fragment>
 			<Header />
-			<Routes>
-				<Route path={'' || '/'} element={<PostsPage Comments={Comments} posts={posts} setCommentOb={setCommentOb} />} />
-				<Route path="/comments/:commentId" element={<CommentsPage Comments={Comments} commentOb={commentOb!} />} />
-				<Route path={"*" || "404"} element={<NotFoundPage />} />
-			</Routes>
+			<div className='main-app-container'>
+				<Routes>
+					<Route path={'' || '/'} element={<PostsPage Comments={Comments} posts={posts} setpostOb={setPostOb} />} />
+					<Route path="/comments/:commentId" element={<CommentsPage Comments={Comments} postOb={postOb!} />} />
+					<Route path={"*" || "404"} element={<NotFoundPage />} />
+				</Routes>
+			</div>
 		</React.Fragment>
 	);
 }
 
 export default App;
+

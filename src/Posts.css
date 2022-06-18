@@ -1,0 +1,105 @@
+.posts-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.post {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: auto;
+    justify-content: center;
+}
+
+.posts-card {
+    display: inline-block;
+    max-width: 22vw;
+    height: 40vw;
+    margin-left: 3vw;
+    margin-bottom: 5vh;
+    justify-content: center;
+    border-style: double;
+    border-width: 5px;
+    border-color: #dddddd;
+}
+
+img.card-image {
+    display: flex;
+    width: 21vw;
+    margin-bottom: 1vh;
+    justify-content: center;
+}
+
+.card-lower-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-lower-content .card-caption {
+    font-size: 15px;
+    display: inline;
+    font-weight: 600;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.card-lower-content .button-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 45%;
+    margin-right: .5vw;
+    height: 7vh;
+    background-color: #ffffff;
+    border-style: double;
+    border-width: 2px;
+    border-color: #aaaaaa;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .post {
+        flex-direction: column;
+        justify-self: center;
+    }
+    .posts-card {
+        max-width: 70%;
+        width: 70%;
+        height: 90vw;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 5vh;
+    }
+    img.card-image {
+        width: 50vw;
+        margin: auto;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+    .card-lower-content .button-flex {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .btn {
+        width: 75%;
+        margin: auto;
+        margin-bottom: 3vh;
+    }
+    .card-lower-content .card-caption {
+        max-width: 75%;
+        margin: auto;
+        margin-bottom: 5vh;
+    }
+    i {
+        font-size: 90px;
+    }
+}
